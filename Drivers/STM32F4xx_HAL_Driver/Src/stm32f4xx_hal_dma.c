@@ -1195,7 +1195,7 @@ static uint32_t DMA_CalcBaseAndBitshift(DMA_HandleTypeDef *hdma)
   uint32_t stream_number = (((uint32_t)hdma->Instance & 0xFFU) - 16U) / 24U;
   
   /* lookup table for necessary bitshift of flags within status registers */
-  static const uint8_t flagBitshiftOffset[8U] = {0U, 6U, 16U, 22U, 0U, 6U, 16U, 22U};
+  static const   flagBitshiftOffset[8U] = {0U, 6U, 16U, 22U, 0U, 6U, 16U, 22U};
   hdma->StreamIndex = flagBitshiftOffset[stream_number];
   
   if (stream_number > 3U)
