@@ -60,9 +60,9 @@ typedef const struct State State_t;
 #define Right  &fsm[2]
 
 State_t fsm[3]={
-		{0x03, 10, { Right, Left,   Right,  Center }},  // Center
-		{0x02, 10, { Left,  Center, Right,  Center }},  // Left
-		{0x00, 10, { Right, Left,   Center, Center }}   // Right
+		{0x03, 100, { Right, Left,   Right,  Center }},  // Center
+		{0x02, 100, { Left,  Center, Right,  Center }},  // Left
+		{0x00, 100, { Right, Left,   Center, Center }}   // Right
 };
 State_t *Spt;  // pointer to the current state
 uint32_t Input;
